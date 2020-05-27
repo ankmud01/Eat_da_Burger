@@ -1,11 +1,12 @@
-const mysql = require("dotenv/config");
+require("dotenv/config");
+const mysql = require("mysql");
 
 const connection = mysql.createConnection({
     host: "localhost",
     port: "3306",
     user: "root",
     password: `${process.env.password}`,
-    database: "officeDb"
+    database: "burgers_db"
 });
 
 connection.connect(function(err){
@@ -13,7 +14,7 @@ connection.connect(function(err){
         console.error(`error connecting: ${err.stack}`);
         return;
     }
-    console.lof(`connected as id ${connection.threadId}`)
+    console.log(`connected as id ${connection.threadId}`)
 });
 
 module.exports = connection;
