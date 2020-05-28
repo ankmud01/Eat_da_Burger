@@ -50,10 +50,10 @@ const orm = {
             cb(result);
         });
     },
-    updateOne: function(table, colName, colNewValue, colCondition, colConditionValue, cb){
-        let queryString = "UPDATE ?? SET (?? = ?) WHERE (?? = ?);"
+    updateOne: function(table, colName, colNewValue, condition, cb){
+        let queryString = "UPDATE ?? SET (?? = ?) WHERE (??);"
         console.log(queryString);
-        connection.query(queryString,[table, colName, colNewValue, colCondition, colConditionValue], function(err, result){
+        connection.query(queryString,[table, colName, colNewValue, condition], function(err, result){
             if(err){
                 throw err
             }
