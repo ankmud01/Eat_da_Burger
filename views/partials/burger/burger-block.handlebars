@@ -1,9 +1,14 @@
-<li>
-	{{burger_name}}
+<div class="burg-group">
+	<div class="text-center burg-name">
+		{{burger_name}}
+	</div>
+	<div>
+		<button type="button" class="btn btn-primary float-left change-devour " data-id="{{id}}"
+			data-newdevour="{{devoured}}">
+			{{#if devoured}}Devour It!{{else}}Devoured!{{/if}}
+		</button>
 
-	<button class="change-devour" data-id="{{id}}" data-newdevour="{{devoured}}">
-		{{#if devoured}}Devour It!{{else}}Devoured!{{/if}}
-	</button>
-
-	<button class="delete-burger" data-id="{{id}}">DELETE</button>
-</li>
+		<button type="button" class="btn btn-danger float-right delete-burger" data-id="{{id}}">DELETE</button>
+	</div>
+	<br><br>
+</div>

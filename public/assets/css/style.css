@@ -1,10 +1,26 @@
 body {
-    background-color: beige;
+    background-color: rosybrown;
+  }
+
+  h2{
+    text-align: center;
+    font-family: cursive;
+  }
+
+  .add-burg{
+    /* text-align: left; */
+    font-family: cursive;
+  }
+
+  ul{
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
   }
   
-  li {
+  .burg-name {
     padding: 5px;
-    margin: 5px;
+    margin: 1px;
     background: #faebd7;
   }
   
@@ -19,10 +35,25 @@ body {
   }
   
   .form-group {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
   
   .image-formatter {
-    width: 210px;
-    margin: 10px;
+
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  #pageTitle{
+    text-align: center;
+    font-family: cursive;
+    text-decoration: underline;
+  }
+  .container{
+    margin-top: 30px;
+  }
+
+  .delete-burger{
+    text-align: left;
+    font-weight: bolder;
   }
